@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WorkoutLog</title>
+    <title>Workout Log Application</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,21 @@
   </head>
 
   <body>
-    <%= yield %>
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="nav-header">
+				<%= link_to "Workout Log", root_path, class: "navbar-brand" %>
+				<div class="nav navbar-nav navbar-right">
+				<%= link_to "New Workout", new_workout_path, class: "navbar navbar-link" %>
+				</div>
+			</div>
+		</div>
+	</nav>
+<div class="container">
+<%= yield %>
+</div>
+
+
   </body>
 </html>
